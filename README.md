@@ -42,7 +42,7 @@ Source: https://askubuntu.com/questions/1162798/how-do-i-view-the-contents-of-a-
 
 <code>sudo dpkg-deb -b ~/Downloads/tmp wps-office-9125.deb</code>
 
-This will take a while (~5min on my puny ASUS X202E 2013 minilaptop), and will make your CPU runs quite intensively due to compression, so be patient.
+This will take a while (~15min on my puny ASUS X202E 2013 minilaptop), and will make your CPU runs quite intensively due to compression, so be patient.
 
 7. Install the fixed deb package:
 
