@@ -48,9 +48,11 @@ This will take a while (~5min on my puny ASUS X202E 2013 minilaptop), and will m
 
 <code>sudo dpkg -i wps-office-9125.deb</code>
 
-8. (Extra) Install firejail
+8. (Extra) Install firejail and reboot
 
 <code>sudo apt install firejail</code>
+
+<code>sudo reboot</code>
 
 9. (Still extra) Download the four firejail-induced executables of WPS Office from this git repository and overwrite them to your /usr/bin/, then change permission of those four files to 755 of those files:
 
