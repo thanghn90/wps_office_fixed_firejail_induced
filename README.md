@@ -48,17 +48,25 @@ This will take a while (~15min on my puny ASUS X202E 2013 minilaptop), and will 
 
 <code>sudo dpkg -i wps-office-9125.deb</code>
 
-8. (Extra) Install firejail and reboot
+8. Install WPS Office fonts by downloading from https://github.com/BannedPatriot/ttf-wps-fonts (credit: @BannedPatriot) and run the install.sh as root:
+
+<code>sudo ./install.sh</code>
+
+9. Install Microsoft fonts (Arial, Tahoma, Times New Roman, etc...):
+
+<code>sudo apt install ttf-mscorefonts-installer</code>
+
+10. (Extra) Install firejail and reboot
 
 <code>sudo apt install firejail</code>
 
 <code>sudo reboot</code>
 
-9. (Still extra) Download the four firejail-induced executables of WPS Office from this git repository and overwrite them to your /usr/bin/, then change permission of those four files to 755 of those files:
+11. (Still extra) Download the four firejail-induced executables of WPS Office from this git repository and overwrite them to your /usr/bin/, then change permission of those four files to 755 of those files:
 
 <code>chmod 755 et wps wpp wpspdf</code>
 
 This will ensure the WPS softwares cannot connect to the internet. Credit to a reddit folk: https://www.reddit.com/r/linux/comments/lhb8pd/using_wps_office_or_any_app_you_want_with_blocked/
 
 
-10. (for Vietnamese typing) Use fcitx-unikey instead of ibus-unikey or ibus-bamboo if you want to type Vietnamese in WPS Office. ibus cause significant slowdown during WPS Office startup (I suspect it's due to gtk2 implementation of ibus or some kind of qt-gtk incompatibility within ibus module. At once, I thought I was able to fix it by installing appmenu-gtk2-module (https://askubuntu.com/questions/1237747/ubuntu-20-04-applications-take-too-long-to-start-up), but after a reboot, it's slow again, and removing+reinstalling appmenu-gtk2-module does not work anymore). I'll write a separate guide just to instruct you how to install and config fcitx-unikey.
+12. (for Vietnamese typing) Use fcitx-unikey instead of ibus-unikey or ibus-bamboo if you want to type Vietnamese in WPS Office. ibus cause significant slowdown during WPS Office startup (I suspect it's due to gtk2 implementation of ibus or some kind of qt-gtk incompatibility within ibus module. At once, I thought I was able to fix it by installing appmenu-gtk2-module (https://askubuntu.com/questions/1237747/ubuntu-20-04-applications-take-too-long-to-start-up), but after a reboot, it's slow again, and removing+reinstalling appmenu-gtk2-module does not work anymore). I'll write a separate guide just to instruct you how to install and config fcitx-unikey.
