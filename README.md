@@ -1,6 +1,9 @@
 # WPS Office with fixes (roll back to a working version) and run under firejail
 This guide is for those who want to rebuild a .deb package of a working WPS office version for Linux, with firejail induced into the executables. The problem is, as I'm writing this guide, the official debian package (.deb) of WPS office for Linux on WPS website, version 11.1.0.10920.XA_amd64, does NOT work with Unikey for Vietnamese writing, including both ibus-unikey and fcitx-unikey (or any kind of different input methods for different languages). There is a slightly older build version on SNAP that does work with Unikey input methods (https://snapcraft.io/wps-2019-snap), but it's a SNAP package. If you have no issue installing and using a SNAP package, or have no issue with the official deb package, skip this guide. However, if you want to fix the official deb package by modifying it with the content of the working SNAP version (and add firejail integration to prevent the software from connecting to the internet and send your private data to baidu), continue to read on.
 
+# Why bother?
+For those who wonder why bother installling WPS Office and why not use LibreOffice, it's all about compatibility. I was able to open a very old ppt and doc files of mine from 2005 with WPS Office and EDIT them, while LibreOffice gave me a bunch of different issues (moving lines in Excel graph, different placement of images in a ppt slide, etc...). It's true for Android too, if you don't know already.
+
 # Step-by-step Instruction
 1. Download the official deb package from WPS Office website, version 11.1.0.10920.XA_amd64: https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/10920/wps-office_11.1.0.10920.XA_amd64.deb
 
